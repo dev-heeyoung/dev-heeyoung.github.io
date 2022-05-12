@@ -5,6 +5,7 @@
   --color-white: #ffffff;
   --color-skyBlue: #97a1de;
   --color-navy: #2b2b2b;
+  --color-gray: #474b4f;
 
   /* size */
   --fontSize-micro: 16px;
@@ -14,12 +15,20 @@
   --fontSize-large: 36px;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
 body {
   background-color: var(--color-lightWhite);
   font-family: calluna,serif;
   font-weight: 700;
+  margin: auto;
   font-style: normal;
-  margin: 0;
   color: var(--color-navy);
 }
 
@@ -42,19 +51,20 @@ h2 {
 
 p {
   font-family: 'Open Sans', sans-serif;
-  color: #474b4f;
+  color: var(--color-gray);
   font-size: var(--fontSize-regular);
   font-weight: 600;
 }
 
 #navbar {
+  position: fixed absolute;
   display: flex;
-  margin: auto;
-  justify-content: center;
+  width: 100%;
+  top: 0px;
   color: var(--color-skyBlue);
   font-size: var(--fontSize-medium);
-  max-width: 2000px;
-
+  background-color: var(--color-lightWhite);
+  z-index: 1;
 }
 
 #navbar ul {
@@ -63,11 +73,14 @@ p {
 
 .navbar__menu {
   display: flex;
-  margin: 10px 0px 15px 0px;
+  justify-content: center;
+  width: 100%;
+  height: 30px;
+
 }
 
 .navbar__menu--item {
-  margin: 20px 40px;
+  margin: 0 20px;
   cursor: pointer;
   border-bottom: 3px solid var(--color-lightWhite);
   padding: 5px 7px;
@@ -79,14 +92,25 @@ p {
   border-color: var(--color-skyBlue);
 }
 
-#home .container {
+.navbar__toggle--btn {
+  position: absolute;
+  right: 32px;
+  font-size: 30px;
+  margin-top: 25px;
+  color: var(--color-skyBlue);
+  cursor: pointer;
+  display: none;
+}
+
+
+.home__set {
   margin-top: 50px;
   margin-bottom: 80px;
   display: flex;
   justify-content: space-between;
 }
 
-.home__right {
+.home__left {
   background-color: var(--color-white);
   border-radius: 50%;
   width: 300px;
@@ -100,7 +124,7 @@ p {
   margin-top: 5px;
 }
 
-.home__left {
+.home__right {
   margin-top: 20px;
   color: var(--color-navy);
 }
@@ -135,7 +159,7 @@ p {
   font-family: 'Open Sans', sans-serif;
   font-weight: 500;
   font-size: var(--fontSize-small);
-  color: #474b4f;
+  color: var(--color-gray);
 }
 
 .edu__left {
@@ -300,4 +324,39 @@ p {
 .contact__icons--icon:hover {
   transform: scale(1.2);
   margin: 15px;
+}
+
+
+/* For below 768px screen width */
+@media screen and (max-width: 768px){
+  .navbar__toggle--btn {
+    display: block;
+  }
+
+  #navbar {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .navbar__menu {
+    flex-direction:column;
+    text-align: center;
+    background-color: var(--color-lightWhite);
+    height: 100%;
+    display: none;
+  }
+  
+  .home__set {
+    display: inline-block;
+  }
+
+  .home__left {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .edu__right {
+    margin-left: 20px;
+  }
 }

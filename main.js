@@ -19,7 +19,7 @@ var navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click', (e) => {
     var target = e.target.dataset.link;
     if (target == null) {
-        return null;
+        return;
     }
     var element = document.querySelector(target);
     element.scrollIntoView({behavior: "smooth"});
@@ -46,4 +46,32 @@ var arrowUp = document.querySelector('#arrow');
 var topWindow = document.querySelector('#home');
 arrowUp.addEventListener('click', () => {
     topWindow.scrollIntoView({behavior: "smooth"});
+})
+
+// Projects
+var categories = document.querySelector('.projects__categories');
+var projectContainer = document.querySelector('.projects__des');
+var projects = document.querySelectorAll('.project');
+
+// filtering projects
+categories.addEventListener('click', (e) => {
+    var target = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+    if (target == null){
+        return;
+    }
+        
+    projectContainer.classList.add('anim-out');    
+
+    setTimeout(() => {
+        projects.forEach((project) => {
+            if(target==='*' || target === project.dataset.type) {
+                project.classList.remove('invisible');
+            } else {
+                project.classList.add('invisible');
+            }
+        })
+        projectContainer.classList.remove('anim-out');  
+    }, 300);
+    
+    
 })

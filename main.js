@@ -6,8 +6,6 @@ var navbar = document.querySelector('#navbar');
 var navbarHeight = navbar.getBoundingClientRect().height;
 
 document.addEventListener('scroll', () => {
-    console.log(`n: ${navbarHeight}`);
-    console.log(`w: ${window.scrollY}`);
     if (window.scrollY > navbarHeight) {
         navbar.classList.add('navbar--colored');
     } else {
@@ -15,4 +13,16 @@ document.addEventListener('scroll', () => {
     }
 })
 
+// Handle scrolling when clicking on the navbar menu
+var navbarMenu = document.querySelector('.navbar__menu');
 
+navbarMenu.addEventListener('click', (e) => {
+    console.log(e.target.dataset.link);
+    var target = e.target.dataset.link;
+    if (target == null) {
+        return null;
+    }
+    var element = document.querySelector(target);
+    element.scrollIntoView({behavior: "smooth"});
+
+})

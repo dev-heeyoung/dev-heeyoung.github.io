@@ -29,7 +29,7 @@ navbarMenu.addEventListener('click', (e) => {
 // Home
 // Handle "contact me" button on home
 var contactMe = document.querySelector('.home__contact');
-contactMe.addEventListener('click', (e) => {
+contactMe.addEventListener('click', () => {
     var contact = document.querySelector('#contact');
     contact.scrollIntoView({behavior: "smooth"});
 })
@@ -39,4 +39,11 @@ var homeHeight = home.getBoundingClientRect().height;
 
 document.addEventListener('scroll', () => {
     home.style.opacity = 1 - window.scrollY / homeHeight;
+})
+
+// Arrow up button
+var arrowUp = document.querySelector('#arrow');
+var topWindow = document.querySelector('#home');
+arrowUp.addEventListener('click', () => {
+    topWindow.scrollIntoView({behavior: "smooth"});
 })

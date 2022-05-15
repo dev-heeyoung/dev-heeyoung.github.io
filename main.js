@@ -21,9 +21,9 @@ navbarMenu.addEventListener('click', (e) => {
     if (target == null) {
         return;
     }
+
     var element = document.querySelector(target);
     element.scrollIntoView({behavior: "smooth"});
-
 })
 
 // Home
@@ -55,16 +55,21 @@ var projects = document.querySelectorAll('.project');
 
 // filtering projects
 categories.addEventListener('click', (e) => {
-    var target = e.target.dataset.filter || e.target.parentNode.dataset.filter;
-    if (target == null){
+    var filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+    if (filter == null){
         return;
     }
-        
+
+    const selected = document.querySelector('.category__btn.selected');
+    const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+    selected.classList.remove('selected');
+    target.classList.add('selected');
+
     projectContainer.classList.add('anim-out');    
 
     setTimeout(() => {
         projects.forEach((project) => {
-            if(target==='*' || target === project.dataset.type) {
+            if(filter ==='*' || filter === project.dataset.type) {
                 project.classList.remove('invisible');
             } else {
                 project.classList.add('invisible');
@@ -72,6 +77,5 @@ categories.addEventListener('click', (e) => {
         })
         projectContainer.classList.remove('anim-out');  
     }, 300);
-    
-    
 })
+

@@ -56,6 +56,7 @@ p {
   font-weight: 600;
 }
 
+/* navbar */
 #navbar {
   position: fixed;
   display: flex;
@@ -109,7 +110,7 @@ p {
   display: none;
 }
 
-
+/* home */
 .home__set {
   margin-top: 50px;
   margin-bottom: 80px;
@@ -153,6 +154,7 @@ p {
   transform: scale(1.1);
 }
 
+/* about */
 #about {
   background-color: var(--color-white);
 }
@@ -181,6 +183,7 @@ p {
   padding-left: 20px;
 }
 
+/* skills & tools */
 #skills {
   padding-bottom: 70px;
 }
@@ -210,6 +213,7 @@ p {
   margin: 10px;
 }
 
+/* projects */
 #projects {
   background-color: var(--color-white);
   padding-bottom: 70px;
@@ -321,6 +325,7 @@ p {
   background-color: var(--color-lightWhite);
 }
 
+/* contact */
 #contact {
   background-color: var(--color-skyBlue);
   color: var(--color-navy);
@@ -379,7 +384,17 @@ p {
     background-color: var(--color-lightWhite);
     height: 100%;
     display: none;
+    
   }
+
+  .navbar__menu--item {
+    border: none;
+  }
+
+  .navbar__menu.open {
+    display: block;
+  }
+  
   
   .home__set {
     display: inline-block;

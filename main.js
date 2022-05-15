@@ -2,8 +2,8 @@
 
 // navbar
 // make the navbar colored when scroll down
-var navbar = document.querySelector('#navbar');
-var navbarHeight = navbar.getBoundingClientRect().height;
+const navbar = document.querySelector('#navbar');
+const navbarHeight = navbar.getBoundingClientRect().height;
 
 document.addEventListener('scroll', () => {
     if (window.scrollY > navbarHeight) {
@@ -14,48 +14,56 @@ document.addEventListener('scroll', () => {
 })
 
 // Handle scrolling when clicking on the navbar menu
-var navbarMenu = document.querySelector('.navbar__menu');
+const navbarMenu = document.querySelector('.navbar__menu');
 
 navbarMenu.addEventListener('click', (e) => {
-    var target = e.target.dataset.link;
+    const target = e.target.dataset.link;
     if (target == null) {
         return;
     }
 
-    var element = document.querySelector(target);
+    navbarMenu.classList.remove('open');
+    
+    const element = document.querySelector(target);
     element.scrollIntoView({behavior: "smooth"});
+})
+
+// navbar toggle button
+const toggleBtn = document.querySelector('.navbar__toggle--btn');
+toggleBtn.addEventListener('click', () => {
+    navbarMenu.classList.toggle('open');
 })
 
 // Home
 // Handle "contact me" button on home
-var contactMe = document.querySelector('.home__contact');
+const contactMe = document.querySelector('.home__contact');
 contactMe.addEventListener('click', () => {
-    var contact = document.querySelector('#contact');
+    const contact = document.querySelector('#contact');
     contact.scrollIntoView({behavior: "smooth"});
 })
 
-var home = document.querySelector('.home__set');
-var homeHeight = home.getBoundingClientRect().height;
+const home = document.querySelector('.home__set');
+const homeHeight = home.getBoundingClientRect().height;
 
 document.addEventListener('scroll', () => {
     home.style.opacity = 1 - window.scrollY / homeHeight;
 })
 
 // Arrow up button
-var arrowUp = document.querySelector('#arrow');
-var topWindow = document.querySelector('#home');
+const arrowUp = document.querySelector('#arrow');
+const topWindow = document.querySelector('#home');
 arrowUp.addEventListener('click', () => {
     topWindow.scrollIntoView({behavior: "smooth"});
 })
 
 // Projects
-var categories = document.querySelector('.projects__categories');
-var projectContainer = document.querySelector('.projects__des');
-var projects = document.querySelectorAll('.project');
+const categories = document.querySelector('.projects__categories');
+const projectContainer = document.querySelector('.projects__des');
+const projects = document.querySelectorAll('.project');
 
 // filtering projects
 categories.addEventListener('click', (e) => {
-    var filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
     if (filter == null){
         return;
     }

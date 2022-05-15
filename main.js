@@ -17,7 +17,6 @@ document.addEventListener('scroll', () => {
 var navbarMenu = document.querySelector('.navbar__menu');
 
 navbarMenu.addEventListener('click', (e) => {
-    console.log(e.target.dataset.link);
     var target = e.target.dataset.link;
     if (target == null) {
         return null;
@@ -25,4 +24,19 @@ navbarMenu.addEventListener('click', (e) => {
     var element = document.querySelector(target);
     element.scrollIntoView({behavior: "smooth"});
 
+})
+
+// Home
+// Handle "contact me" button on home
+var contactMe = document.querySelector('.home__contact');
+contactMe.addEventListener('click', (e) => {
+    var contact = document.querySelector('#contact');
+    contact.scrollIntoView({behavior: "smooth"});
+})
+
+var home = document.querySelector('.home__set');
+var homeHeight = home.getBoundingClientRect().height;
+
+document.addEventListener('scroll', () => {
+    home.style.opacity = 1 - window.scrollY / homeHeight;
 })

@@ -23,7 +23,7 @@ navbarMenu.addEventListener('click', (e) => {
     }
 
     navbarMenu.classList.remove('open');
-    
+
     const element = document.querySelector(target);
     element.scrollIntoView({behavior: "smooth"});
 })
@@ -52,6 +52,15 @@ document.addEventListener('scroll', () => {
 // Arrow up button
 const arrowUp = document.querySelector('#arrow');
 const topWindow = document.querySelector('#home');
+
+document.addEventListener('scroll', () => {
+    if (window.scrollY > homeHeight / 2) {
+        arrowUp.classList.add('visible');
+    } else {
+        arrowUp.classList.remove('visible');
+    }
+})
+
 arrowUp.addEventListener('click', () => {
     topWindow.scrollIntoView({behavior: "smooth"});
 })

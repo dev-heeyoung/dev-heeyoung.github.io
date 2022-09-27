@@ -28,9 +28,10 @@
         <div class="navbar__menu">
         <ul class="navbar__menu">
             <li class="navbar__menu--item" data-link="#home">Home</li>
-            <li class="navbar__menu--item" data-link="#about">About</li>
+            <li class="navbar__menu--item" data-link="#experience">Experience</li>
             <li class="navbar__menu--item" data-link="#skills">Skills & Tools</li>
             <li class="navbar__menu--item" data-link="#projects">Projects</li>
+            <li class="navbar__menu--item" data-link="#education">Education</li>
             <li class="navbar__menu--item" data-link="#contact">Contact</li>
         </ul>
         </div>
@@ -55,48 +56,32 @@
             <div class="home__right">
               <h1 class="home__title">Hello, <br/> I'm Heeyoung</h1>
               <h2 class="home__description">A Software Developer residing in Toronto, Canada</h2>
+              <p>I have a strong interest in developing full-stack systems and applications. I'm a fast learner, self-motivated worker, and team player with ability to plan and time schedule, work under strict time pressure and adapt quickly when needed.</p>
               <button class="home__contact">Contact me</button>
             </div>
           </div>
       </section>
 
-      <!-- About -->
-      <section id="about">
+      <!-- Experience -->
+      <section id="experience">
         <div class="container">
-          <h1>About me</h1>
-          <p>I have a strong interest in developing full-stack systems and applications. I'm a fast learner, self-motivated worker, and team player with ability to plan and time schedule, work under strict time pressure and adapt quickly when needed.</p>
-
-          <br/>
-          <h2>Education</h2>
-          <div class="educations">
-            <div class="edu">
-              <div class="edu__left">
-                <div class="edu__period">01/2021 - 04/2022</div>
-                <div class="edu__des">Toronto, Canada</div>
-              </div>
-              <div class="edu__right">
-                <div class="edu__name">Computer Programming | GPA 4.0</div>
-                <div class="edu__college">Seneca College, Diploma</div>
-              </div>  
-            </div><br/>
-            <div class="edu">
-              <div class="edu__left">
-                <div class="edu__period">08/2014 - 03/2009</div>
-                <div class="edu__des">Seoul, Korea</div>
-              </div>
-              <div class="edu__right"> 
-                <div class="edu__name">Statistics | GPA 3.6</div>
-                <div class="edu__college">The University of Suwon, Bachelor of Science</div>
-              </div>
+          <h1>Experience</h1>
+          <div class="experience_set">
+            <h3>Business Analyst</h3>
+            <p class="experience_from">JNJ Australia · Full-time | Dec 2017 - Jan 2019</p>
+            <div class="experience_des">
+              <p>-Created a detailed business analysis, outlining problems, opportunities, and solutions for a business using Excel</p>
+              <p>-Managed the website using HTML and CSS</p>
+              <p>-Coordinated facilitator travel details, developed travel estimates, and created itineraries</p>
             </div>
-          </div><br/>
-          <h2>Award</h2>
-          <div class="awards">
-            <div class="edu__des">- President's Honour List (Winter 2021)</div>
-            <div class="edu__des">- President's Honour List (Fall 2021)</div>
-            <div class="edu__des">- President's Honour List (Winter 2022)</div>
           </div>
-
+          <div class="experience_set">
+            <h3>Bell Creekfest Hackathon</h3>
+            <p class="experience_from">Bell | 16th, Sep 2022 - 24th, Sep 2022</p>
+            <div class="experience_des">
+              <p>-Participated in a software design challenge hackathon focused on the theme of Diversity, Equity & Inclusion</p>
+            </div>
+          </div>
         </div>
       </section>
       
@@ -109,21 +94,23 @@
             <i class="fa-solid fa-language"></i>
             <h2 class="skills__category">Languages</h2>
             <ul>
-              <li>C/C++</li>
               <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>C/C++</li>
               <li>Java</li>
               <li>Go</li>
               <li>HTML</li>
-              <li>CSS</li>
+              <li>CSS/TailwindCSS</li>
             </ul>
           </div>
           <div class ="lan__set">
             <i class="fa-solid fa-globe"></i>
-            <h2 class="skills__category">Web Technologies</h2>
+            <h2 class="skills__category">Web</h2>
             <ul>
+              <li>NextJS</li>
+              <li>React</li>
               <li>NodeJs</li>
               <li>ExpressJS</li>
-              <li>React</li>
               <li>Restful API</li>
               <li>Socket</li>
               <li>JWT</li>
@@ -138,6 +125,7 @@
               <li>Oracle</li>
               <li>MySQL</li>
               <li>PostgreSQL</li>
+              <li>Prisma</li>
             </ul>
           </div>
           <div class ="lan__set">
@@ -162,7 +150,7 @@
             <h2 class="skills__category">Knowledge</h2>
             <ul>
               <li>Object-Oriented Design</li>
-              <li>Data structure &Algorithm</li>
+              <li>Data structure & Algorithm</li>
               <li>Agile & Scrum Methodologies</li>
             </ul>
           </div>
@@ -190,11 +178,11 @@
             <button class="category__btn" data-filter="c">C/C++<span class="catetory__count">2</span></button>
         </div>
         <div class="projects__des">
-          <a class="project" data-type="front" href="https://dev-heeyoung.github.io/">
-            <img class="project__img" src="imgs/portfolio.jpg" alt="project"/>
+          <a class="project" data-type="back" href="https://github.com/dev-heeyoung/nearMe">
+            <img class="project__img" src="imgs/nearme.jpg" alt="project"/>
             <div class="projects__des__detail">
-                <h3>Portfolio Website</h3>
-                <span>HTML/CSS/JavaScript</span>
+                <h3>NearMe</h3>
+                <span>NextJS/React/JavaScript</span>
             </div>
           </a>
           <a class="project" data-type="back" href="https://github.com/dev-heeyoung/dwitter">
@@ -204,6 +192,14 @@
                 <span>JavaScript/NodeJs</span>
             </div>
           </a>
+          <a class="project" data-type="front" href="https://dev-heeyoung.github.io/">
+            <img class="project__img" src="imgs/portfolio.jpg" alt="project"/>
+            <div class="projects__des__detail">
+                <h3>Portfolio Website</h3>
+                <span>HTML/CSS/JavaScript</span>
+            </div>
+          </a>
+
             <a class="project" data-type="front" href="https://github.com/dev-heeyoung/web-wildlife-walk">
             <img class="project__img" src="imgs/jsProject.jpg" alt="js project"/>
             <div class="projects__des__detail">
@@ -247,6 +243,40 @@
             </div>
           </a>     
           
+          </div>
+        </div>
+      </section>
+
+      <section id="education">
+        <div class="container">
+          <h1>Education</h1>
+          <div class="educations">
+            <div class="edu">
+              <div class="edu__left">
+                <div class="edu__period">01/2021 - 04/2022</div>
+                <div class="edu__des">Toronto, Canada</div>
+              </div>
+              <div class="edu__right">
+                <div class="edu__name">Computer Programming | GPA 4.0</div>
+                <div class="edu__college">Seneca College, Diploma</div>
+              </div>  
+            </div><br/>
+            <div class="edu">
+              <div class="edu__left">
+                <div class="edu__period">08/2014 - 03/2009</div>
+                <div class="edu__des">Seoul, Korea</div>
+              </div>
+              <div class="edu__right"> 
+                <div class="edu__name">Statistics | GPA 3.6</div>
+                <div class="edu__college">The University of Suwon, Bachelor of Science</div>
+              </div>
+            </div>
+          </div><br/>
+          <h2>Award</h2>
+          <div class="awards">
+            <div class="edu__des">- President's Honour List (Winter 2021)</div>
+            <div class="edu__des">- President's Honour List (Fall 2021)</div>
+            <div class="edu__des">- President's Honour List (Winter 2022)</div>
           </div>
         </div>
       </section>

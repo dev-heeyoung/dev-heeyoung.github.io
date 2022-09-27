@@ -48,12 +48,12 @@ h2 {
   font-size: var(--fontSize-medium);
 }
 
-p {
+/* p {
   font-family: 'Open Sans', sans-serif;
   color: var(--color-gray);
   font-size: var(--fontSize-regular);
   font-weight: 600;
-}
+} */
 
 /* navbar */
 #navbar {
@@ -120,13 +120,16 @@ p {
   border-radius: 50%;
   width: 300px;
   height: 340px;
+  margin-top: 50px;
+  margin-right: 30px;
 }
 
 .home__avatar {
   width: 290px;
   height: 330px;
   border-radius: 50%;
-  margin-top: 5px;
+  line-height: 340px;
+  margin: 3px;
 }
 
 .home__right {
@@ -151,33 +154,23 @@ p {
   transform: scale(1.1);
 }
 
-/* about */
-#about {
+/* experience */
+#experience {
   background-color: var(--color-white);
 }
 
-.edu {
-  display: flex;
-  justify-content: space-between;
+.experience_set {
+  margin: 50px;
 }
 
-.educations, .awards {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 500;
-  font-size: var(--fontSize-small);
+.experience_from {
   color: var(--color-gray);
 }
 
-.edu__left {
-  text-align: right;
-  width: 400px;
-}
-
-.edu__right {
+.experience_des {
+  font-size: var(--fontSize-micro);
   text-align: left;
-  width: 500px;
-  border-left: 3px solid lightgray;
-  padding-left: 20px;
+  padding-left: 100px;
 }
 
 /* skills & tools */
@@ -189,7 +182,7 @@ p {
   display: flex;
   justify-content: center;
   font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
+  font-weight: 200;
 }
 
 .skills__container {
@@ -202,19 +195,20 @@ p {
   color: var(--color-gray);
   font-family: 'Open Sans', sans-serif;
   margin-bottom: 25px;
+  font-size: var(--fontSize-small)
 }
 
 .lan__set {
   background-color: var(--color-white);
-  width: 225px;
-  height: 370px;
+  width: 200px;
+  height: 300px;
   margin: 5px;
   border-radius: 10px;
 }
 
 .lan__set i {
-  font-size: 50px;
-  margin-top: 40px;
+  font-size: 35px;
+  margin-top: 30px;
   color: var(--color-gray);
 }
 
@@ -226,7 +220,8 @@ p {
   list-style: none;
   color: gray;
   font-size: var(--fontSize-regular);
-  margin-top: 5px;
+  margin-top: 3px;
+  font-size: var(--fontSize-micro);
   
 }
 
@@ -340,6 +335,32 @@ p {
   width: 150px;
   height: 2px;
   background-color: var(--color-lightWhite);
+}
+
+
+/* education */
+.edu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.educations, .awards {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+  font-size: var(--fontSize-small);
+  color: var(--color-gray);
+}
+
+.edu__left {
+  text-align: right;
+  width: 400px;
+}
+
+.edu__right {
+  text-align: left;
+  width: 500px;
+  border-left: 3px solid lightgray;
+  padding-left: 20px;
 }
 
 /* contact */
